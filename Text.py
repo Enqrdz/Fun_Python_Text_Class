@@ -45,3 +45,12 @@ def check_if_palindrome(string_to_check):
     else:
         print("%s is not a palindrome!" %(string_to_check))
 check_if_palindrome("race car")
+
+
+def count_words_in_text(text):
+    counter = 1;
+    for char in text:
+        if(char == " "):
+            counter += 1
+    print("There are %s words in: %s!" %(counter,text))
+count_words_in_text("Hello darkness my old friend")
