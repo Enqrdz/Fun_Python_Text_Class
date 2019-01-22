@@ -1,20 +1,22 @@
-def pig_latin_conversion(word_to_be_converted):
+def converting_to_pig_latin(text):
     vowels  = "aeiouAEIOU"
     string_of_consonants = ""
     pig_latin_append = "way"
-    counter = 0
+    index_of_text = 0
 
-    for letter in word_to_be_converted:
-        #if letter is a vowel
-        if(vowels.find(letter) != -1):
+    if(vowels.find(text.index(0)) != -1):
+        pig_latin_append = "ay"
+
+    for char in text:
+        #if char is a vowel
+        if(vowels.find(char) != -1):
             word_to_be_converted += string_of_consonants + pig_latin_append
-            print(word_to_be_converted[counter::])
+            print(text[counter::])
             break
         else:
-            string_of_consonants += letter
-            pig_latin_append = "ay"
+            string_of_consonants += char
             counter += 1
-pig_latin_conversion("Child")
+converting_to_pig_latin("Child")
 
 
 def count_vowels_in_text(text):
